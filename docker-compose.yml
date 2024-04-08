@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:tcp://db:1521/test
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - db
+  db:
+    image: oscarfonts/h2
+    ports:
+      - "1521:1521"
+      - "81:81"
+    environment:
+      - H2_OPTIONS=-ifNotExists
+      - WEB_PORT=81
+      - TCP_PORT=1521
+      - WEB_ALLOW_OTHERS=true
+      - TCP_ALLOW_OTHERS=true
