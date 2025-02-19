@@ -1,0 +1,10 @@
+<gradleEnterprise>
+    <server>
+        <url>https://scans.gradle.com</url>
+    </server>
+    <buildScan>
+        <termsOfServiceUrl>https://gradle.com/terms-of-service</termsOfServiceUrl>
+        <termsOfServiceAgree>yes</termsOfServiceAgree>
+        <tag>backend-engineer</tag>  <!-- Adding tag -->
+    </buildScan>
+</gradleEnterprise>

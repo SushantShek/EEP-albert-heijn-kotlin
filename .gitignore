@@ -4,6 +4,8 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
+/.DS_Store
+
 .idea/
 *.iws
 *.iml
@@ -34,3 +36,4 @@ build/
 ### Mac OS ###
 .DS_Store
 /src/main/resources/conf.properties
+.mvn/.develocity/
